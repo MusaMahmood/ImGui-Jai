@@ -1,0 +1,48 @@
+#import "Basic";
+
+ImGui_SetStyle_EnemyMouse :: (style : *ImGui.Style) {
+    style.Alpha = 1.0;
+    style.WindowRounding = 3.0; 
+    style.GrabRounding = 1.0;
+    style.GrabMinSize = 20.0;
+    style.FrameRounding = 3.0;
+    colors : *ImGui.ImVec4 = *style.Colors[0];
+    colors[ImGui.Col.Text] = make_vector4(0.00, 1.0, 1.0, 1.00); 
+    colors[ImGui.Col.TextDisabled] = make_vector4(0.00, 0.40, 0.41, 1.00);
+    colors[ImGui.Col.WindowBg] = make_vector4(0.00, 0.00, 0.00, 1.00);
+    colors[ImGui.Col.Border] = make_vector4(0.00, 1.00, 1.00, 0.65);
+    colors[ImGui.Col.BorderShadow] = make_vector4(0.00, 0.00, 0.00, 0.00);
+    colors[ImGui.Col.FrameBg] = make_vector4(0.44, 0.80, 0.80, 0.18);
+    colors[ImGui.Col.FrameBgHovered] = make_vector4(0.44, 0.80, 0.80, 0.27);
+    colors[ImGui.Col.FrameBgActive] = make_vector4(0.44, 0.81, 0.86, 0.66);
+    colors[ImGui.Col.TitleBg] = make_vector4(0.14, 0.18, 0.21, 0.73);
+    colors[ImGui.Col.TitleBgCollapsed] = make_vector4(0.00, 0.00, 0.00, 0.54);
+    colors[ImGui.Col.TitleBgActive] = make_vector4(0.00, 1.00, 1.00, 0.27);
+    colors[ImGui.Col.MenuBarBg] = make_vector4(0.00, 0.00, 0.00, 0.20);
+    colors[ImGui.Col.ScrollbarBg] = make_vector4(0.22, 0.29, 0.30, 0.71);
+    colors[ImGui.Col.ScrollbarGrab] = make_vector4(0.00, 1.00, 1.00, 0.44);
+    colors[ImGui.Col.ScrollbarGrabHovered] = make_vector4(0.00, 1.00, 1.00, 0.74);
+    colors[ImGui.Col.ScrollbarGrabActive] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.CheckMark] = make_vector4(0.00, 1.00, 1.00, 0.68);
+    colors[ImGui.Col.SliderGrab] = make_vector4(0.00, 1.00, 1.00, 0.36);
+    colors[ImGui.Col.SliderGrabActive] = make_vector4(0.00, 1.00, 1.00, 0.76);
+    colors[ImGui.Col.Button] = make_vector4(0.00, 0.65, 0.65, 0.46);
+    colors[ImGui.Col.ButtonHovered] = make_vector4(0.01, 1.00, 1.00, 0.43);
+    colors[ImGui.Col.ButtonActive] = make_vector4(0.00, 1.00, 1.00, 0.62);
+    colors[ImGui.Col.Header] = make_vector4(0.00, 1.00, 1.00, 0.33);
+    colors[ImGui.Col.HeaderHovered] = make_vector4(0.00, 1.00, 1.00, 0.42);
+    colors[ImGui.Col.HeaderActive] = make_vector4(0.00, 1.00, 1.00, 0.54);
+    colors[ImGui.Col.ResizeGrip] = make_vector4(0.00, 1.00, 1.00, 0.54);
+    colors[ImGui.Col.ResizeGripHovered] = make_vector4(0.00, 1.00, 1.00, 0.74);
+    colors[ImGui.Col.ResizeGripActive] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.PlotLines] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.PlotLinesHovered] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.PlotHistogram] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.PlotHistogramHovered] = make_vector4(0.00, 1.00, 1.00, 1.00);
+    colors[ImGui.Col.TextSelectedBg] = make_vector4(0.00, 1.00, 1.00, 0.22);
+    colors[ImGui.Col.Tab] = lerp(colors[ImGui.Col.Header], colors[ImGui.Col.TitleBgActive], 0.8);
+    colors[ImGui.Col.TabHovered] = colors[ImGui.Col.HeaderHovered];
+    colors[ImGui.Col.TabActive] = lerp(colors[ImGui.Col.HeaderActive], colors[ImGui.Col.TitleBgActive], 0.60);
+    colors[ImGui.Col.TabUnfocused] = lerp(colors[ImGui.Col.Tab], colors[ImGui.Col.TitleBg], 0.80);
+    colors[ImGui.Col.TabUnfocusedActive] = lerp(colors[ImGui.Col.TabActive], colors[ImGui.Col.TitleBg], 0.40);
+}
